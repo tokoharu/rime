@@ -35,10 +35,12 @@ jobs:
         mkdir tmp && cd tmp && rime_init --git && cd ..
         cd example
         rime help
+        pwd
+        ls
         rime markdownify_full && rime clean
     - uses: actions/upload-artifact@v1
       if: always()
       with:
         name: summary
-        path: summary.md
+        path: example/summary.md
 
