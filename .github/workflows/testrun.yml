@@ -26,9 +26,13 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 pytest
+        pip insall .
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: markdownify_full
       run: |
+        rime
+        rime help test
+        mkdir tmp && cd tmp && rime_init --git && cd ..
         cd example
         rime help
         rime markdownify_full && rime clean
