@@ -49,11 +49,13 @@ jobs:
         name: summary.$$.md
         path: example/summary.md
     - name: pack_for_aoj
+      if: always()
       run: |
         ls
         cd example
         ./pack_example_for_aoj.sh
     - uses: actions/upload-artifact@v2
+      if: always()
       with:
         name: packed_example.$$.zip
         path: example/packed_example.zip
