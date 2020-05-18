@@ -38,8 +38,6 @@ jobs:
         sdk install kotlin
     - name: markdownify_full
       run: |
-        rime
-        rime help test
         mkdir tmp && cd tmp && rime_init --git && cd ..
         cd example
         rime help
@@ -60,5 +58,5 @@ jobs:
     - uses: actions/upload-artifact@v2
       if: always()
       with:
-        name: packed_example.${{ steps.date.outputs.date }}.zip
-        path: example/packed_example.zip
+        name: packed_example.${{ steps.date.outputs.date }}
+        path: example/packed_example
