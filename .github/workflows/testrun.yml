@@ -28,6 +28,11 @@ jobs:
         pip install flake8 pytest
         pip install .
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Set up Kotlin
+      run: |
+        curl -sL https://get.sdkman.io | bash
+        source "${HOME}/.sdkman/bin/sdkman-init.sh"
+        sdk install kotlin
     - name: markdownify_full
       run: |
         rime
