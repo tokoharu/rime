@@ -38,7 +38,6 @@ jobs:
         sdk install kotlin
     - name: markdownify_full
       run: |
-        mkdir tmp && cd tmp && rime_init --git && cd ..
         cd example
         rime markdownify_full && rime clean
     - uses: actions/upload-artifact@v2
