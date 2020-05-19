@@ -34,6 +34,7 @@ jobs:
     - name: Set up Kotlin
       run: |
         curl -sL https://get.sdkman.io | bash
+        source "${HOME}/.sdkman/bin/sdkman-init.sh"
         sdk install kotlin
     - name: markdownify_full
       run: |
